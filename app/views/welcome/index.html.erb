@@ -1,2 +1,7 @@
-<h1>Welcome to Blocitoff</h1>
+<% if user_signed_in? %>
+  <h1>Welcome to BlocItOff <%= current_user.email %>!</h1>
+<% else %>
+  <h1>Welcome to Blocitoff</h1>
+<% end %>
+
 <p>This is the home page for Blocitoff.</p>

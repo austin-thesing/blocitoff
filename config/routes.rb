@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  root to: 'welcome#index' # sets the root of the website/application
+
+
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

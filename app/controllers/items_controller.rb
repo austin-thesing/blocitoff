@@ -6,9 +6,9 @@ class ItemsController < ApplicationController
     @item = current_user.items.new(item_params)
 
     if @item.save
-      flash[:notice] = "hey, your item was saved"
+      flash[:notice] = "Your item was saved!"
     else
-      flash[:alert] = "whoops!"
+      flash[:alert] = "Oops... Something went wrong. Please refresh and try again."
     end
 
     redirect_to user_path(current_user)

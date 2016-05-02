@@ -15,14 +15,14 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-     @item = current_user.items.find(item_params) # also tried current_user.items.find
+     @item = current_user.items.find(params[:id]) # also tried current_user.items.find
 
     if @item.destroy
       flash[:notice] = "Way to go!! You just completed \"#{@item.name}\"!!!"
-      redirect_to root_redirect
+      redirect_to root_path
     else
       flash[:error] = "An error occurred while trying to complete the item. Please try again."
-      redirect_to root_redirect # is there a way to render the user's show view again for the user trying to complete an item..
+      redirect_to root_path # is there a way to render the user's show view again for the user trying to complete an item..
       #render :show
     end
   end

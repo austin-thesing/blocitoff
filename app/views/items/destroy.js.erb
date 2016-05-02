@@ -1,5 +1,8 @@
 <% if @item.destroyed? %>
   $('#item-<%= @item.id %>').hide();
+
+  $('.flash').prepend("<div class='alert alert-success'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash.now[:notice] %></div>");
+  // Add alert after successful deletion "task completion" with AJAX.
 <% else %>
   $('.flash').prepend("<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><%= flash.now[:alert] %></div>");
 <% end %>

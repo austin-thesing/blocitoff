@@ -1,6 +1,5 @@
-<!-- <tr> -->
 <tr id="item-<%= item.id %>">
   <td><%= item.name %></td>
-  <td></td>
+  <td><%= distance_of_time_in_words(item.created_at, item.created_at + 7.days) %></td>
   <td><%= link_to "", user_item_path(current_user, item), method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td> <!-- Remember to pass in the parameters to the URL that the Action's route needs to function or you will hit errors.  This would not work without (current_user, item) -->
 </tr>

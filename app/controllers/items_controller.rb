@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
     @item = current_user.items.new(item_params)
 
     if @item.save
-      flash[:notice] = "Your item was saved!"
+      flash[:notice] = "Your task \"#{@item.name}\" was added! Go forth and be productive!"
     else
       flash[:alert] = "Oops... Something went wrong. Please refresh and try again."
     end

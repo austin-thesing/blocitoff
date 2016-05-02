@@ -1,7 +1,5 @@
 class ItemsController < ApplicationController
 
-
-
   def create
     @item = current_user.items.new(item_params)
 
@@ -15,7 +13,7 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-     @item = current_user.items.find(params[:id]) # also tried current_user.items.find
+    @item = current_user.items.find(params[:id]) # also tried current_user.items.find(item_params)
 
     if @item.destroy
       flash[:notice] = "Way to go!! You just completed \"#{@item.name}\"!!!"

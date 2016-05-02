@@ -44,6 +44,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 # Devise User Auth gem
 gem 'devise'
+# Automates running of the todo.rake file to delete Tasks after they expire
+gem 'whenever', :require => false
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views

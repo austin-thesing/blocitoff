@@ -19,6 +19,8 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   # gem 'pry-rails'
+  # used to draw diagrams of model's in application
+  gem "rails-erd"
 end
 
 # Use SCSS for stylesheets

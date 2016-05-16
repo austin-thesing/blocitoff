@@ -1,4 +1,7 @@
-<h1 class="media-heading">Your Task's</h1>
+<h2 class="media-heading greeting">Tasks for <%= @user.email %></h2>
+<div class="media-heading time-info">
+  <p><em>Tasks not completed within 7 days will dissappear.</em></p>
+</div>
 <div class="media">
   <div class="media-body">
     <table class="table table-striped">
@@ -11,11 +14,8 @@
     </table>
   </div>
 
-  <div>
+  <div class="form">
     <%= render partial: "items/form" %>
   </div>
   <br>
-  <div class="media-heading">
-    <p><em>Task's have a 7 day time frame for you to complete them. If a task is not completed in 7 days it will be removed from your list.</em></p>
-  </div>
 </div>

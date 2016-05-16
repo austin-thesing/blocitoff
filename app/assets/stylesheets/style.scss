@@ -1,3 +1,94 @@
+/* ------------- SCSS Variable Declarations ------------- */
+// Fonts
+$heading-font: 'Lato', sans-serif;
+$body-font: 'Merriweather', serif;
+// Colors
+$red: #a54848;
+$egg-shell: #dce8ea;
+$blue: #a4b8c4;
+$gray-blue: #6e8387;
+$beige: #ab9b96;
+$white: #fff;
+// Time Remaining Colors
+$time-green: #6de096;
+$time-yellow: #ffde6b;
+$time-red: $red;
+
+/* ------------- Start Custom Style Rules ------------- */
+// Header/Navigation Styles
+nav.navbar.navbar-default {
+  background: $red;
+  border-radius: 0;
+}
+
+.navbar-brand {
+  font-family: $heading-font;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: $white !important;
+}
+
 .user-session {
   margin-top: 15px;
+  font-family: $heading-font;
+  font-weight: 400;
+  font-size: 14px;
+  color: $white !important;
+  a {
+    color: $white !important;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+/* ------------- Body Styles ------------- */
+
+// h1.media-heading.welcome-user {
+//   font-family: $heading-font;
+//   font-weight: 600;
+//   font-size: 30px;
+// }
+
+.greeting {
+  font-family: $heading-font;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+/* ------------- Table Styles ------------- */
+tr th {
+  font-weight: 600;
+  font-size: 16px;
+  background: $blue;
+}
+
+tr {
+  // background: $pale-green;
+  font-family: $body-font;
+  font-weight: 400;
+  font-size: 14px;
+  background: $egg-shell;
+  a.glyphicon.glyphicon-ok.check {
+    color: $beige;
+    font-size: 16px !important;
+  }
+  a.glyphicon.glyphicon-ok.check:hover {
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+/* ------------- Form Styles ------------- */
+div.form {
+  font-family: $heading-font;
+  .btn {
+    color: $white;
+    background: $beige;
+    border-radius: 0;
+  }
+  .btn:hover {
+    color: $white;
+    background: $red;
+  }
 }
